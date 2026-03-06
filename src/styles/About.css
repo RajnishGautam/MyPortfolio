@@ -1,0 +1,193 @@
+.about {
+  background: #ffffff;
+  padding: 8rem 9%;
+  min-height: auto;
+}
+
+/* ── Heading ── */
+.about .heading {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: rgb(32, 32, 32);
+  font-weight: 800;
+}
+
+.about .heading span {
+  color: rgb(115, 3, 167);
+}
+
+/* ── Row Layout ── */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  padding: 0;                  /* removed padding causing overflow */
+}
+
+/* ── Image ── */
+.about .row .image {
+  flex: 1 1 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .row .image img {
+  width: 30rem;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  /* removed mix-blend-mode — was causing GPU lag on scroll */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.about .row .image img:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* ── Content ── */
+.about .row .content {
+  flex: 1 1 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about .row .content h3 {
+  font-size: 2.5rem;
+  color: #1b1b1b;
+  margin-bottom: 0.5rem;
+}
+
+.about .row .content .tag {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #020133;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #444;
+  text-align: justify;
+  margin-top: 0;               /* removed margin-top that was stacking space */
+}
+
+/* ── Info Boxes ── */
+.about .row .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.about .row .content .box-container .box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about .row .content .box-container .box p {
+  font-size: 1.4rem;
+  text-transform: none;
+  text-align: left;
+  margin: 0;                   /* removed default margin stacking */
+  line-height: 1.5;
+}
+
+.about .row .content .box-container .box p span {
+  color: #011aff;
+  font-weight: 700;
+}
+
+/* ── Resume Button ── */
+.resumebtn {
+  margin-top: 2.5rem;
+}
+
+.resumebtn .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.1rem 2.8rem;
+  border-radius: 10px;
+  background: #1a047e;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;          /* explicitly set so it stays in flow */
+}
+
+.resumebtn .btn span {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.resumebtn .btn i {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.resumebtn .btn:hover {
+  background: #13025f;
+  transform: translateY(-2px);
+}
+
+.resumebtn .btn:hover i {
+  transform: translateX(5px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about {
+    padding: 6rem 5%;
+  }
+
+  .about .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about .row .image img {
+    width: 22rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 5rem 4%;
+  }
+
+  .about .heading {
+    font-size: 2.6rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 2.2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.4rem;
+  }
+
+  .about .row .content .box-container {
+    gap: 1rem;
+  }
+
+  .about .row .image img {
+    width: 18rem;
+  }
+}

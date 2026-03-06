@@ -1,0 +1,150 @@
+.experience {
+background: #f7f7f7;
+}
+
+.experience .timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.experience .timeline::after {
+content: "";
+position: absolute;
+width: 6px;
+background: #020133;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -3px;
+}
+
+.experience .container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+z-index: 1;
+}
+
+.experience .container::after {
+content: "\f0b1";
+position: absolute;
+width: 25px;
+height: 25px;
+right: -17px;
+background-color: #ffffff;
+border: 4px solid #ff9f55;
+top: 15px;
+border-radius: 50%;
+z-index: 2;
+font-size: 1.6rem;
+text-align: center;
+color: #02094b;
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+}
+
+.experience .left {
+left: 0;
+}
+
+.experience .right {
+left: 50%;
+}
+
+.experience .left::before {
+content: "";
+position: absolute;
+top: 22px;
+right: 30px;
+border: medium solid #f68c09;
+border-width: 10px 0 10px 10px;
+border-color: transparent transparent transparent #f68c09;
+}
+
+.experience .right::before {
+content: "";
+position: absolute;
+top: 22px;
+left: 30px;
+border: medium solid #f68c09;
+border-width: 10px 10px 10px 0;
+border-color: transparent #f68c09 transparent transparent;
+}
+
+.experience .right::after {
+left: -16px;
+}
+
+.experience .content {
+background-color: #f68c09;
+position: relative;
+border-radius: 6px;
+padding: 15px;
+}
+
+.experience .content .tag h2 {
+font-size: 1.6rem;
+margin-bottom: 5px;
+}
+
+.experience .content .desc h3 {
+font-size: 1.4rem;
+font-weight: 600;
+}
+
+.experience .content .desc p {
+font-size: 1.2rem;
+}
+.experience-viewall{
+display:flex;
+justify-content:center;
+margin-top:40px;
+}
+
+.experience-viewall .btn{
+padding:1.5rem 3rem;
+background:#020133;
+color:#fff;
+border-radius:6px;
+font-size:1.5rem;
+display:inline-flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
+}
+
+.experience-viewall .btn:hover{
+background:#ff9f55;
+color:#000;
+}
+@media screen and (max-width: 600px) {
+
+.experience .timeline::after {
+left: 31px;
+}
+
+.experience .container {
+width: 100%;
+padding-left: 70px;
+padding-right: 25px;
+}
+
+.experience .container::before {
+left: 60px;
+border: medium solid #f68c09;
+border-width: 10px 10px 10px 0;
+border-color: transparent #f68c09 transparent transparent;
+}
+
+.experience .left::after,
+.experience .right::after {
+left: 15px;
+}
+
+.experience .right {
+left: 0%;
+}
+
+}
