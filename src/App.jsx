@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
 
@@ -174,6 +175,7 @@ function App() {
       <Footer />
       <ScrollTop />
       <Analytics />
+      <SpeedInsights/>
     </>
   );
 }
