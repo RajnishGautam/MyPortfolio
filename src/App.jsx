@@ -21,7 +21,7 @@ function App() {
       document.title =
         document.visibilityState === "visible"
           ? "Portfolio | Rajnish"
-          : "Come Back To Portfolio";
+          : "Portfolio | Rajnish";
     };
     document.addEventListener("visibilitychange", handleVisibility);
     return () => document.removeEventListener("visibilitychange", handleVisibility);
