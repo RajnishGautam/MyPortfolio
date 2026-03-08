@@ -26,7 +26,7 @@ const projectsData = [
     desc: "A customizable AI voice assistant inspired by Alexa and Google Assistant with voice commands, automation features, and smart task handling.",
     links: {
       view: "https://jbphs.co.uk/",
-      code: "*",
+      code: "/confidential",
     },
   },
 ];
