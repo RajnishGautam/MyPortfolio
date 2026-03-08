@@ -53,6 +53,15 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* Remove mobile tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Extra safety for images */
+img {
+  -webkit-tap-highlight-color: transparent;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

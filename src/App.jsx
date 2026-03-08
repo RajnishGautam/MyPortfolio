@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/global.css";
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -10,8 +12,25 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
+
+import NotFound from "./pages/NotFound";
+
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
+function MainPage() {
+  return (
+    <>
+      <Home />
+      <About />
+      <Skills />
+      <Education />
+      <Work />
+      <Experience />
+      <Contact />
+    </>
+  );
+}
 
 function App() {
 
@@ -27,7 +46,7 @@ function App() {
     return () => document.removeEventListener("visibilitychange", handleVisibility);
   }, []);
 
-  // VanillaTilt — init once, wait for DOM to settle
+  // VanillaTilt
   useEffect(() => {
     let interval;
 
@@ -36,16 +55,15 @@ function App() {
       if (!elements.length) return;
 
       window.VanillaTilt.init(elements, {
-        max: 10,           // reduced from 15 — less extreme = less repaints
-        speed: 400,        // how fast tilt resets — smoother feel
-        glare: false,      // glare causes extra compositing layer = lag
+        max: 10,
+        speed: 400,
+        glare: false,
         "max-glare": 0,
       });
     };
 
     const loadTilt = () => {
       if (window.VanillaTilt) {
-        // Wait for all components to mount before scanning for .tilt
         setTimeout(initTilt, 500);
         return;
       }
@@ -72,62 +90,48 @@ function App() {
 
     return () => {
       clearInterval(interval);
-      // Properly destroy tilt instances on unmount to free GPU memory
       document.querySelectorAll(".tilt").forEach((el) => {
         if (el.vanillaTilt) el.vanillaTilt.destroy();
       });
     };
   }, []);
 
-  // ScrollReveal — fixed config, no reset, shorter distance
+  // ScrollReveal
   useEffect(() => {
     let interval;
 
     const initScrollReveal = () => {
       const sr = window.ScrollReveal({
-        origin: "bottom",      // bottom origin feels more natural than top
-        distance: "30px",      // was 80px — shorter = no blur smear
-        duration: 600,         // was 1000ms — faster = no animation overlap
+        origin: "bottom",
+        distance: "30px",
+        duration: 600,
         delay: 100,
         easing: "ease-out",
-        reset: false,          // was true — THE main lag cause, animate once only
+        reset: false,
         mobile: true,
         useDelay: "always",
-        viewFactor: 0.1,       // trigger when 10% visible, not 0% (default)
+        viewFactor: 0.1,
       });
 
-      // Home
-      sr.reveal(".home .content h2",   { delay: 100 });
-      sr.reveal(".home .content p",    { delay: 200 });
-      sr.reveal(".home .btn",          { delay: 300 });
-      sr.reveal(".home .image",        { delay: 200, origin: "right" });
+      sr.reveal(".home .content h2", { delay: 100 });
+      sr.reveal(".home .content p", { delay: 200 });
+      sr.reveal(".home .btn", { delay: 300 });
+      sr.reveal(".home .image", { delay: 200, origin: "right" });
       sr.reveal(".home .social-icons li", { interval: 100, delay: 400 });
 
-      // About
-      sr.reveal(".about .row .image",  { delay: 100, origin: "left" });
-      sr.reveal(".about .content h3",  { delay: 150 });
-      sr.reveal(".about .content .tag",{ delay: 200 });
-      sr.reveal(".about .content p",   { delay: 250 });
-      sr.reveal(".about .box-container",{ delay: 300 });
-      sr.reveal(".resumebtn",          { delay: 350 });
+      sr.reveal(".about .row .image", { delay: 100, origin: "left" });
+      sr.reveal(".about .content h3", { delay: 150 });
+      sr.reveal(".about .content .tag", { delay: 200 });
+      sr.reveal(".about .content p", { delay: 250 });
+      sr.reveal(".about .box-container", { delay: 300 });
+      sr.reveal(".resumebtn", { delay: 350 });
 
-      // Skills — reveal container once, not each bar individually
-      sr.reveal(".skills .container",  { delay: 100 });
-
-      // Education
-      sr.reveal(".education .box",     { interval: 150 });
-
-      // Work
-      sr.reveal(".work .box",          { interval: 150 });
-
-      // Experience
+      sr.reveal(".skills .container", { delay: 100 });
+      sr.reveal(".education .box", { interval: 150 });
+      sr.reveal(".work .box", { interval: 150 });
       sr.reveal(".experience .container", { interval: 200 });
-
-      // Contact
       sr.reveal(".contact .container", { delay: 100 });
-
-      // Footer
-      sr.reveal(".footer .box",        { interval: 150 });
+      sr.reveal(".footer .box", { interval: 150 });
     };
 
     const loadScrollReveal = () => {
@@ -153,7 +157,6 @@ function App() {
       document.body.appendChild(script);
     };
 
-    // Small delay so React has finished painting all sections
     const timer = setTimeout(loadScrollReveal, 300);
 
     return () => {
@@ -163,20 +166,20 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Education />
-      <Work />
-      <Experience />
-      <Contact />
+
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/confidential" element={<NotFound />} />
+      </Routes>
+
       <Footer />
       <ScrollTop />
       <Analytics />
-      <SpeedInsights/>
-    </>
+      <SpeedInsights />
+    </Router>
   );
 }
 
