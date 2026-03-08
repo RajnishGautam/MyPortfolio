@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Work.css";
 
 const projectsData = [
@@ -52,15 +53,22 @@ const Work = () => {
                 <p>{project.desc}</p>
 
                 <div className="btns">
-                  <a href={project.links.view} className="btn" target="_blank" rel="noreferrer">
+                  {/* External link → new tab */}
+                  <a
+                    href={project.links.view}
+                    className="btn"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className="fas fa-eye"></i>
                     View
                   </a>
 
-                  <a href={project.links.code} className="btn" target="_blank" rel="noreferrer">
+                  {/* Internal route → same tab */}
+                  <Link to={project.links.code} className="btn">
                     Code
                     <i className="fas fa-code"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -69,10 +77,10 @@ const Work = () => {
       </div>
 
       <div className="work-viewall">
-        <a href="/" className="btn">
+        <Link to="/" className="btn">
           <span>View All</span>
           <i className="fas fa-arrow-right"></i>
-        </a>
+        </Link>
       </div>
     </section>
   );
