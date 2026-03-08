@@ -8,7 +8,7 @@ const projectsData = [
     desc: "Official Punto7x website showcasing premium visual design, modern UI, brand identity, and creative digital services through a sleek, fully responsive user experience.",
     links: {
       view: "https://punto7x.com",
-      code: "/confidentail",
+      code: "/confidential",
     },
   },
   {
