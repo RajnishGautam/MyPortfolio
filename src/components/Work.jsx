@@ -12,7 +12,7 @@ const projectsData = [
     },
   },
   {
-    image: "assets/images/projects/7dot.png",
+    image: "assets/images/projects/dot.png",
     name: "7DotIT Solutions",
     desc: "Official 7DotIT Solutions website presenting IT services, company information, and business offerings with a clean, information focused layout and modern responsive UI design.",
     links: {
