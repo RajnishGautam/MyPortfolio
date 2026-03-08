@@ -12,6 +12,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
+import ScrollToTopOnRoute from "./components/ScrollToTopOnRoute";
 
 import NotFound from "./pages/NotFound";
 
@@ -167,6 +168,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTopOnRoute />
       <Navbar />
 
       <Routes>
