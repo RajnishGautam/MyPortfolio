@@ -15,6 +15,7 @@ import ScrollTop from "./components/ScrollTop";
 import ScrollToTopOnRoute from "./components/ScrollToTopOnRoute";
 
 import NotFound from "./pages/NotFound";
+import AboutMasterpiece from "./pages/AboutMe";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -175,6 +176,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
 
         <Route path="/confidential" element={<NotFound />} />
+        <Route path="/about" element={<AboutMasterpiece />} />
       </Routes>
 
       <Footer />

@@ -1,54 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="box-container">
+
         <div className="box">
           <h3>Rajnish's Portfolio</h3>
           <p>
             Thank you for visiting my personal portfolio website. Connect with
-            me over socials. <br /> <br /> Keep Rising 🚀. Connect with me over
-            live chat!
+            me over socials. <br /><br />
+            Keep Rising 🚀. Connect with me over live chat!
           </p>
         </div>
 
         <div className="box">
           <h3>quick links</h3>
-          <a href="#home">
+
+          <Link to="/">
             <i className="fas fa-chevron-circle-right"></i> home
-          </a>
-          <a href="#about">
+          </Link>
+
+          <Link to="/about">
             <i className="fas fa-chevron-circle-right"></i> about
-          </a>
-          <a href="#skills">
+          </Link>
+
+          <Link to="/skills">
             <i className="fas fa-chevron-circle-right"></i> skills
-          </a>
-          <a href="#education">
+          </Link>
+
+          <Link to="/education">
             <i className="fas fa-chevron-circle-right"></i> education
-          </a>
-          <a href="#work">
+          </Link>
+
+          <Link to="/work">
             <i className="fas fa-chevron-circle-right"></i> work
-          </a>
-          <a href="#experience">
+          </Link>
+
+          <Link to="/experience">
             <i className="fas fa-chevron-circle-right"></i> experience
-          </a>
+          </Link>
+
         </div>
 
         <div className="box">
           <h3>contact info</h3>
+
           <p>
-            <i className="fas fa-phone"></i>+91 9905955461
+            <i className="fas fa-phone"></i> +91 9905955461
           </p>
+
           <p>
-            <i className="fas fa-envelope"></i>rajnish09032003@gmail.com
+            <i className="fas fa-envelope"></i> rajnish09032003@gmail.com
           </p>
+
           <p>
-            <i className="fas fa-map-marked-alt"></i>Salem, Tamilnadu,
-            India-412206
+            <i className="fas fa-map-marked-alt"></i> Salem, Tamilnadu, India
           </p>
+
           <div className="share">
+
             <a
               href="https://www.linkedin.com/in/rajnish-kumar-b0141528b"
               className="fab fa-linkedin"
@@ -56,6 +69,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             ></a>
+
             <a
               href="https://github.com/RajnishGautam"
               className="fab fa-github"
@@ -63,6 +77,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             ></a>
+
             <a
               href="mailto:rajnish09032003@gmail.com"
               className="fas fa-envelope"
@@ -70,15 +85,18 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             ></a>
+
             <a
-              href="http://t.me/rajnish_0903"
+              href="https://t.me/rajnish_0903"
               className="fab fa-telegram-plane"
               aria-label="Telegram"
               target="_blank"
               rel="noreferrer"
             ></a>
+
           </div>
         </div>
+
       </div>
 
       <h1 className="credit">
