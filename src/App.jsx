@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/global.css";
 
@@ -20,6 +20,8 @@ import AboutMasterpiece from "./pages/AboutMe";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
+import Intro from "./components/IntroAnimation";
+
 function MainPage() {
   return (
     <>
@@ -35,6 +37,8 @@ function MainPage() {
 }
 
 function App() {
+  // ✅ INTRO STATE (ADDED)
+  const [showIntro, setShowIntro] = useState(true);
 
   // Tab visibility change
   useEffect(() => {
@@ -45,7 +49,8 @@ function App() {
           : "Portfolio | Rajnish";
     };
     document.addEventListener("visibilitychange", handleVisibility);
-    return () => document.removeEventListener("visibilitychange", handleVisibility);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibility);
   }, []);
 
   // VanillaTilt
@@ -168,22 +173,29 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTopOnRoute />
-      <Navbar />
+    <>
+      {/* ✅ INTRO SCREEN */}
+      {showIntro && <Intro onFinish={() => setShowIntro(false)} />}
 
-      <Routes>
-        <Route path="/" element={<MainPage />} />
+      {/* ✅ MAIN APP (UNCHANGED, JUST WRAPPED) */}
+      {!showIntro && (
+        <Router>
+          <ScrollToTopOnRoute />
+          <Navbar />
 
-        <Route path="/confidential" element={<NotFound />} />
-        <Route path="/about" element={<AboutMasterpiece />} />
-      </Routes>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/confidential" element={<NotFound />} />
+            <Route path="/about" element={<AboutMasterpiece />} />
+          </Routes>
 
-      <Footer />
-      <ScrollTop />
-      <Analytics />
-      <SpeedInsights />
-    </Router>
+          <Footer />
+          <ScrollTop />
+          <Analytics />
+          <SpeedInsights />
+        </Router>
+      )}
+    </>
   );
 }
 
