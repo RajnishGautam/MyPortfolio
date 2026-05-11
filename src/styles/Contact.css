@@ -1,5 +1,5 @@
 .contact {
-  background: #e5ecfb;
+  
   min-height: 60vh;
 }
 
@@ -67,7 +67,7 @@ form .message textarea {
   outline: none;
   padding: 0 16px 0 48px;
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  
   border-radius: 5px;
   border: 1px solid rgb(51, 51, 51);
   background: #e5ecfb;
@@ -111,7 +111,7 @@ form .message textarea::-webkit-scrollbar { width: 0px; }
 
 form .button-area {
   display: flex;
-  float: right;
+  float: center;
   flex-direction: row-reverse;
 }
 
@@ -123,16 +123,14 @@ form .button-area {
   cursor: pointer;
   border-radius: 5px;
   padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: #002057;
   transition: 0.3s ease;
-  font-family: "Nunito", sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.button-area button:hover { background: #421cecf5; }
+.button-area button:hover { background: #002057; }
 
 .button-area button i {
   font-size: 1.5rem;

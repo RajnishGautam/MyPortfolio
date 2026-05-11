@@ -33,18 +33,18 @@ I am always eager to learn new technologies, solve real world problems, and cont
           <div className="box-container">
             <div className="box">
               <p>
-                <span> age: </span> 23
+                <span> Age: </span> 23
               </p>
               <p>
-                <span> phone : </span> +91 9905955461
+                <span> Phone : </span> +91 9905955461
               </p>
             </div>
             <div className="box">
               <p>
-                <span> email : </span> rajnish09032003@gmail.com
+                <span> Email : </span> rajnish09032003@gmail.com
               </p>
               <p>
-                <span> place : </span> Nalanda ,Bihar, INDIA
+                <span> Place : </span> Nalanda ,Bihar, INDIA
               </p>
             </div>
           </div>

@@ -1,13 +1,13 @@
 .skills {
   min-height: fit-content;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  
 }
 
-.skills h2 { color: #fff; }
-.skills .heading span { color: rgb(255, 230, 0); }
+.skills h2 { color: #000; }
+.skills .heading span { color: #002057; }
 
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
+  background: transparent;
   color: #fff;
   border-radius: 1rem;
   padding: 2rem;
@@ -54,7 +54,6 @@
 .skills .container .bar .info span {
   font-size: 1.5rem;
   font-weight: 500;
-  font-family: "Poppins";
   margin-left: 0.5rem;
   text-align: center;
 }

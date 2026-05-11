@@ -1,15 +1,16 @@
 .work {
-  background: linear-gradient(to bottom, #000031, #00002c);
   padding-bottom: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .work h2 {
-  color: #fff;
+  color: #000;
   padding: 1rem;
 }
 
 .work .heading span {
-  color: rgb(255, 230, 0);
+  color: #002057;
 }
 
 /* Layout */
@@ -17,33 +18,34 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
 /* Card */
 .work .box-container .box {
-  flex: 1 1 30rem;
+  flex: 1 1 25rem;
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
-  height: 30rem;
-  background: #111;
-  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.25);
+  height: 25rem;
+  border: 0.5px solid #002057;
+  /* box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.25); */
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .work .box-container .box:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.35);
+  
 }
 
 /* Image */
 .work .box-container .box img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Gradient overlay */
@@ -126,30 +128,47 @@
   transform: translateY(-2px);
 }
 
-/* View all */
 .work-viewall {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 3rem;
 }
 
 .work-viewall .btn {
-  padding: 0.7rem 1.8rem;
-  border-radius: 0.6rem;
-  color: #fff;
-  font-weight: 500;
-  border: 2px solid #fff;
-  box-shadow: 0 6px 14px rgba(65, 84, 241, 0.35);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.6rem;
+  border: 2px solid #002057;
+
+  color: #002057;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+
+  transition: background 0.25s ease,
+              color 0.25s ease,
+              transform 0.2s ease;
+}
+
+.work-viewall .btn span,
+.work-viewall .btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .work-viewall .btn span {
   font-size: 1.5rem;
 }
 
+.work-viewall .btn i {
+  font-size: 1.5rem;
+}
 .work-viewall .btn:hover {
   background: #fff;
   color: #000;

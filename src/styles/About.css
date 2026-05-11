@@ -1,5 +1,5 @@
 .about {
-  background: #ffffff;
+ 
   padding: 8rem 9%;
   min-height: auto;
 }
@@ -14,7 +14,7 @@
 }
 
 .about .heading span {
-  color: rgb(115, 3, 167);
+  color: #002057;
 }
 
 /* ── Row Layout ── */
@@ -68,16 +68,15 @@
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #020133;
+  color: #002057;
   margin-bottom: 1rem;
 }
 
 .about .row .content p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  color: #444;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #000;
   text-align: justify;
   margin-top: 0;               /* removed margin-top that was stacking space */
 }
@@ -88,7 +87,6 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
-  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 
@@ -99,21 +97,23 @@
 }
 
 .about .row .content .box-container .box p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-transform: none;
   text-align: left;
-  margin: 0;                   /* removed default margin stacking */
+  margin: 0;        
   line-height: 1.5;
 }
 
 .about .row .content .box-container .box p span {
-  color: #011aff;
-  font-weight: 700;
+  color: #002057;
+  font-weight: 600;
 }
 
 /* ── Resume Button ── */
 .resumebtn {
   margin-top: 2.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .resumebtn .btn {
@@ -122,17 +122,18 @@
   gap: 0.6rem;
   padding: 1.1rem 2.8rem;
   border-radius: 10px;
-  background: #1a047e;
+  background: #002057;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Nunito", sans-serif;
   transition: background 0.3s ease, transform 0.2s ease;
   position: relative;          /* explicitly set so it stays in flow */
+  align-items: center;
+  justify-content: center;
 }
 
 .resumebtn .btn span {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.05rem;
 }
 

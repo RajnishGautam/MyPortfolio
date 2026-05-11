@@ -50,14 +50,14 @@
 
 .home .content h2 {
   font-size: 5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #002057;
 }
 
 .home .content h2 span {
   font-size: 5rem;
-  font-weight: 800;
-  color: #ff7b00;
+  font-weight: 600;
+  color: #002057;
 }
 
 .home .content p {
@@ -82,14 +82,15 @@
   border-radius: 4em;
   transition: 0.5s;
   color: #fff;
-  background: #2506ad;
-  font-family: "Nunito", sans-serif;
+  background: #002057;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: .1rem;
 }
 
 .home .btn span {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
 }
@@ -129,8 +130,8 @@
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: #00d9ff;
-  background-color: #09011b;
+  color: #fff;
+  background-color: #002057;
   width: 44px;
   height: 44px;
   text-align: center;

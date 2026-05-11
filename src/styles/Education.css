@@ -1,15 +1,19 @@
 .education {
-  background: #e5ecfb;
   min-height: fit-content;
 }
-
-.education .qoute {
-  font-size: 1.5rem;
+.education h1 span{
+  font-size: 3.5rem;
   text-align: center;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
+  color: #002057;
+  font-weight: 700;
+}
+.education .qoute {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
   margin-top: 0.5rem;
   color: black;
+  letter-spacing: .05rem;
 }
 
 .education .box-container {
@@ -25,18 +29,17 @@
   flex-direction: row;
   width: 80%;
   border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
   margin-top: 2rem;
   overflow: hidden;
   transition: 0.3s;
-  background: rgb(252, 252, 252);
+  border: .5px solid #cecece;
 }
 
 .education .box-container .box:hover {
-  transform: scale(1.03);
-  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+  
 }
 
 .education .box-container .box .image {
@@ -81,7 +84,7 @@
   color: rgb(34, 109, 0);
   text-align: left;
   margin: 1rem;
-  font-family: "Nunito", sans-serif;
+  
   font-weight: 700;
 }
 

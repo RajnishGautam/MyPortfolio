@@ -47,9 +47,10 @@ const Navbar = () => {
 
   return (
     <header>
-      <a href="#about" className="logo" onClick={(e) => handleNavClick(e, "#about")}>
-        <i className="fab fa-node-js"></i> RAJNISH KUMAR
-      </a>
+      <a href="#about" className="logo">
+  <i className="fab fa-node-js"></i>
+  <span className="logo-text">RAJNISH KUMAR</span>
+</a>
 
       <div
         id="menu"

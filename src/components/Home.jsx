@@ -18,11 +18,12 @@ const Home = () => {
 
       typedInstance.current = new window.Typed(typingRef.current, {
         strings: [
-          "Data Science",
+          "App Development",
           "Full Stack Development",
           "Web Development",
           "Frontend Development",
           "Backend Development",
+          "Digital Marketing"
         ],
         loop: true,
         typeSpeed: 60,

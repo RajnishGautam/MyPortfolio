@@ -4,9 +4,9 @@ import "../styles/Education.css";
 const educationData = [
   {
     image: "./assets/images/educat/college.jpg",
-    title: "Bachelor of Engineering in Computer Science",
+    title: "Bachelor of Engineering in Computer Science | 8.8 CGPA",
     institution: "Dhirajlal Gandhi College Of Technology | Salem | TAMIL NADU",
-    year: "2021-2025 | Pursuing",
+    year: "2021-2025 | Completed",
   },
   {
     image: "./assets/images/educat/school2.jpg",
