@@ -7,12 +7,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
-import Work from "./components/Work";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 import ScrollToTopOnRoute from "./components/ScrollToTopOnRoute";
+import WorkSection from "./components/WorkSection";
 
 import NotFound from "./pages/NotFound";
 import AboutMasterpiece from "./pages/AboutMe";
@@ -29,7 +29,7 @@ function MainPage() {
       <About />
       <Skills />
       <Education />
-      <Work />
+      <WorkSection />
       <Experience />
       <Contact />
     </>

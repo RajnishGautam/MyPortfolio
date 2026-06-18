@@ -51,7 +51,7 @@ I am always eager to learn new technologies, solve real world problems, and cont
 
           <div className="resumebtn">
             <a
-              href="https://drive.google.com/file/d/1vhcN0AqcjWGrk6M-w1j9M9KPUTHKefvH/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1GoOJdH8otMw0-P82i3cgCkFseMsWQjUs/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="btn"

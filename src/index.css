@@ -75,3 +75,13 @@ img {
     background-color: #f9f9f9;
   }
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background:#002057;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

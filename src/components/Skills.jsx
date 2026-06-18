@@ -3,6 +3,7 @@ import "../styles/Skills.css";
 
 const skillsData = [
   { name: "Android App Development", icon: "assets/images/skills/app-dev.png" },
+  { name: "Web Development", icon: "assets/images/skills/web-development.png" },
   { name: "Python", icon: "assets/images/skills/python.png" },
   { name: "Data Science", icon: "assets/images/skills/datascience.png" },
   { name: "Java", icon: "assets/images/skills/java.png" },
@@ -11,7 +12,7 @@ const skillsData = [
   { name: "C Programming", icon: "assets/images/skills/c.png" },
   { name: "Figma", icon: "assets/images/skills/figma.png" },
   { name: "Machine Learning", icon: "assets/images/skills/machinelearning.png" },
-  { name: "Web Development", icon: "assets/images/skills/web-development.png" },
+  
   { name: "Html, CSS", icon: "assets/images/skills/html2.png" },
   { name: "React", icon: "assets/images/skills/react.png" },
   { name: "Express", icon: "assets/images/skills/express-js.png" },

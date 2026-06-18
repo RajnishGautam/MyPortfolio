@@ -4,7 +4,7 @@ import "../styles/Work.css";
 
 const projectsData = [
   {
-    image: "assets/images/projects/punto7x.png",
+    image: "aprojects/punto7x.png",
     name: "Punto7x",
     desc: "Official Punto7x website showcasing premium visual design, modern UI, brand identity, and creative digital services through a sleek, fully responsive user experience.",
     links: {
